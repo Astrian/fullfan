@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "supervisor ./bin/www",
-    "dev": "DEBUG=wolf:* supervisor ./bin/www",
-    "dev2": "DEBUG=wolf:* node ./bin/www",
-    "test": "export DEBUG=wolf:test && mocha -t 5000"
+    "dev": "DEBUG=fullfan:* supervisor ./bin/www",
+    "dev2": "DEBUG=fullfan:* node ./bin/www",
+    "test": "export DEBUG=fullfan:test && mocha -t 5000"
   },
   "repository": {
     "type": "git",
@@ -22,12 +22,15 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
+    "crypto": "0.0.3",
     "debug": "^2.6.8",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "express-session": "^1.15.4",
+    "hmacsha1": "^1.0.0",
     "morgan": "^1.8.2",
     "path": "^0.12.7",
+    "request": "^2.81.0",
     "serve-favicon": "^2.4.3",
     "sqlite3": "^3.1.8",
     "sync_back": "^1.0.2",

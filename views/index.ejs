@@ -2,8 +2,13 @@
 <html lang = 'zh-cn'>
   <head>
     <title>满饭全席</title>
+    <script src="/modules/vue/dist/vue.js"></script>
+    <script src="/modules/vue-resource/dist/vue-resource.min.js"></script>
   </head>
   <body>
-    hello world
+    <div id='module'>
+      <button v-on:click='getAppKey()'>登录至饭否</button>
+    </div>
   </body>
+  <script src='/public/js/logic.js'></script>
 </html>
