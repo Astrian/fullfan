@@ -6,14 +6,11 @@ var app = new Vue({
   },
   methods: {
     getAppKey(){
-      getAppKey()
+      this.$http.get('/interface/getRequestToken').then(res=>{
+        window.location.href='https://fanfou.com/oauth/authorize?oauth_token='+res.body.data.oauth_token+'&oauth_callback='+url;
+      }, res=>{
+        alert('获取 AppKey 失败！')
+      })
     }
   }
 })
-function getAppKey(){
-  app.$http.get('/interface/getRequestToken').then(res=>{
-    window.location.href='https://fanfou.com/oauth/authorize?oauth_token='+res.body.data.oauth_token+'&oauth_callback='+url;
-  }, res=>{
-    alert('获取 AppKey 失败！')
-  })
-}
